@@ -9,6 +9,31 @@
 - [CMake](https://cmake.org/download/) 3.15 以上（Visual Studio 已內建，也可單獨安裝並加入 PATH）
 - （選用）[NSIS](https://nsis.sourceforge.io/)：要產生安裝程式 `.exe` 時才需要
 
+## 安裝 CMake
+
+任選一種方式：
+
+```powershell
+# 方法一：winget（推薦）
+winget install Kitware.CMake
+
+# 方法二：Chocolatey
+choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
+
+# 方法三：Scoop
+scoop install cmake
+```
+
+或從 [cmake.org/download](https://cmake.org/download/) 下載 Windows x64 Installer（`.msi`），安裝時選擇 **Add CMake to the system PATH**。
+
+Visual Studio 的「使用 C++ 的桌面開發」工作負載也內建 CMake，但需從「Developer PowerShell for VS」使用。
+
+安裝後重新開啟終端機，驗證：
+
+```bat
+cmake --version
+```
+
 ## 專案結構
 
 ```
